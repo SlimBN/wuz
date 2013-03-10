@@ -3,6 +3,7 @@ class CreateCategories < ActiveRecord::Migration
     create_table :categories do |t|
       t.string :name
       t.string :slug, :null => false
+      t.text :description
       t.integer :parent_id
       t.integer :category_id
 

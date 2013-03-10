@@ -6,7 +6,17 @@
   <div class="cat-boxes">
     <% @categories.each do |category| %>
     <div class="cat-box">
-      <%= link_to category.name, category %>
+      <div class="image">
+        <%= image_tag "ui/categories/"+category.name+".png" %>
+      </div>
+      <div class="description">
+        <h2><%= link_to category.name, category %></h2>
+        <div>
+          <% Category.where('parent_id = ?', category.id).each do |subcategory| %>
+            <%= link_to subcategory.name, subcategory %>
+          <% end %>
+        </div>
+      </div>
     </div>
     <% end %>
   </div>

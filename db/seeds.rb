@@ -32,12 +32,12 @@ Category.create [{:name => 'Hightech', :slug => 'hightech', :parent_id => '0'}, 
                  {:name => 'Webhosting', :slug => 'webhosting', :parent_id => '7'}, #12
 
 
-                 {:name => 'Travel and Lifestyle', :slug => 'travel-and-lifestyle', :parent_id => '0'}, #14
+                 {:name => 'Travel and Lifestyle', :slug => 'travel-and-lifestyle', :parent_id => '0'},
 
-                 {:name => 'Hotels', :slug => 'hotels', :parent_id => '14'},
-                 {:name => 'Travel Agencies', :slug => 'travel-agencies', :parent_id => '14'},
-                 {:name => 'Destinations', :slug => 'destinations', :parent_id => '14'}, #16
-                 {:name => 'Airlines', :slug => 'airlines', :parent_id => '14'},
+                 {:name => 'Hotels', :slug => 'hotels', :parent_id => '13'}, #14
+                 {:name => 'Travel Agencies', :slug => 'travel-agencies', :parent_id => '13'},
+                 {:name => 'Destinations', :slug => 'destinations', :parent_id => '13'}, #16
+                 {:name => 'Airlines', :slug => 'airlines', :parent_id => '13'},
 
 
                  {:name => 'Motors', :slug => "motors", :parent_id => '0'}, #18
@@ -336,3 +336,8 @@ Country.create [{:name => 'Andorra', :continent_id => 5},
 #Seeding Manufacturers
 Manufacturer.create [{ :name => 'Samsung', :slug => 'samsung', :contact_email => 'contact@samsung.com', :country_id => '126'},
 					{ :name => 'Sony', :slug => 'sony', :contact_email => 'contact@sony.com', :country_id => '118'}]
+
+
+#Seeding Products
+Product.create [{ :name => 'Galaxy S3', :slug => 'galaxy-s3', :refname => 'GT-I9300', :released_at => '2012-05-01', :long_desc => 'The most powerful smartphone on earth', :manufacturer_id => '1'},
+                { :name => 'Galaxy S2', :slug => 'galaxy-s2', :refname => 'GT-I9100', :released_at => '2011-05-01', :long_desc => 'The thinnest smartphone on earth', :manufacturer_id => '1'}] #2
