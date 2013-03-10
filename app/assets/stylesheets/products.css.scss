@@ -1,0 +1,155 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "mixins";
+
+.top-box {
+	margin: 0px;
+	padding: 0px;
+
+	width: 980px;
+
+	display: block;
+
+	.header {
+		width: 100%;
+
+		padding: 10px;
+		padding-left: 0px;
+		padding-right: -10px;
+
+		vertical-align: top;
+		line-height: 50px;
+
+		font: 1em "OpenSansBold",Helvetica,Arial,sans-serif;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: #636D63;
+
+		display: block;
+
+		a {
+			border: 0px;
+
+			font: 1em "OpenSansBold",Helvetica,Arial,sans-serif;
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: bold;
+
+			color: #636D63;
+
+			padding: 5px 15px;
+
+			border-radius: 3px;
+
+			@include box-shadow;
+		}
+
+		.follow {
+			float: right;
+
+			@include button-design;
+		}
+	}
+
+	.photo {
+		width: 300px;
+
+		float: left;
+		text-align: center;
+		vertical-align: middle;
+
+		margin-top: 10px;
+		margin-right: 5px;
+		padding: 10px;
+
+		display: inline-block;
+
+		@include box-shadow;
+
+		img {
+			max-width: 280px;
+		}
+	}
+
+	.spec-menu {
+		width: 660px;
+
+		float: right;
+
+		margin-top: 10px;
+		margin-left: 5px;
+		margin-right: -20px;
+
+		display: inline-block;
+
+		ul li {
+			@include box-shadow;
+
+			margin-right: 10px;
+			padding: 15px;
+
+			list-style: none;
+
+			display: inline;
+		}
+		
+	}
+
+	.specs {
+		width: 650px;
+		min-width: 650px;
+
+		float: right;
+
+		margin-top: 10px;
+		margin-left: 5px;
+		margin-right: -20px;
+		padding: 10px;
+
+		display: inline-block;
+
+		@include box-shadow;
+	}
+}
+
+.separating-cat {
+	width: 100%;
+
+	@include box-shadow;
+}
+
+
+.middle-box {
+	width: 980px;
+
+	margin: 0px;
+	padding: 0px;
+
+	display: block;
+
+	.comparee-list {
+		width: 100%;
+
+		width: 980px;
+
+		margin: 0px;
+		padding: 0px;
+
+		display: block;
+
+		text-align: center;
+
+		.comparee {
+			width: 180px;
+			height: 250px;
+
+			margin: 10px;
+
+			display: inline-block;
+
+			@include box-shadow;
+		}
+	}
+}

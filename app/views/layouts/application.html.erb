@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wuz</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+	<a href="" class="logo">Wuzbest</a>
+
+	<ul class="menu">
+		<li><a href="">Explore</a></li>
+		<li><a href="">Login</a></li>
+	</ul>
+</header>
+
+<%= yield %>
+
+</body>
+</html>
