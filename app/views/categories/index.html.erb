@@ -1,22 +1,41 @@
-<h1>Listing categories</h1>
+<div id="container">
+  <div class="cat-intro">
+    Explore our planets and navigate through our galaxies so you can get the pros and cons of stuffs. unbiased, user-made comparisons. Something is not on the screen?!! <a href="">Tell us</a>
+  </div>
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="cat-boxes">
+    <% @categories.each do |category| %>
+    <div class="cat-box">
+      <%= link_to category.name, category %>
+    </div>
+    <% end %>
+  </div>
+<div>
 
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= link_to category.name, category %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
 
-<br />
+  <h1>Listing categories</h1>
 
-<%= link_to 'New Category', new_category_path %>
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+
+  <% @categories.each do |category| %>
+    <tr>
+      <td><%= link_to category.name, category %></td>
+      <td><%= link_to 'Show', category %></td>
+      <td><%= link_to 'Edit', edit_category_path(category) %></td>
+      <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% Category.where('parent_id = ?', category.id) do |subcategory| %>
+      *<%= link_to subcategory.name, subcategory %></br>
+    <% end %>
+  <% end %>
+  </table>
+
+  <br />
+
+  <%= link_to 'New Category', new_category_path %>
+</div>

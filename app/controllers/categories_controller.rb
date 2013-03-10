@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.where(:parent_category == "1")
+    @categories = Category.where("parent_id = 0")
 
     respond_to do |format|
       format.html # index.html.erb
