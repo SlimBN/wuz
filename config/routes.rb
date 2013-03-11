@@ -2,6 +2,7 @@ Wuz::Application.routes.draw do
   
   resources :products
   resources :categories
+  resources :manufacturers
 
 
   # The priority is based upon order of creation:

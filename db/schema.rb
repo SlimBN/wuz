@@ -346,6 +346,7 @@ ActiveRecord::Schema.define(:version => 20130222205509) do
     t.date     "released_at"
     t.text     "long_desc"
     t.integer  "manufacturer_id"
+    t.integer  "category_id"
     t.integer  "cities_picture_id"
     t.string   "slug",                :null => false
     t.integer  "brag_id"

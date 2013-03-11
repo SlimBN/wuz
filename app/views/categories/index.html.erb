@@ -6,6 +6,10 @@
   <div class="cat-boxes">
     <% @categories.each do |category| %>
     <div class="cat-box">
+      <div class="options">
+        <%= link_to (image_tag "ui/buttons/edit.png"), edit_category_path(category) %>
+        <%= link_to (image_tag "ui/buttons/delete.png"), category, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
       <div class="image">
         <%= image_tag "ui/categories/"+category.name+".png" %>
       </div>
@@ -21,29 +25,6 @@
     <% end %>
   </div>
 <div>
-
-
-  <h1>Listing categories</h1>
-
-  <table>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-
-  <% @categories.each do |category| %>
-    <tr>
-      <td><%= link_to category.name, category %></td>
-      <td><%= link_to 'Show', category %></td>
-      <td><%= link_to 'Edit', edit_category_path(category) %></td>
-      <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <% Category.where('parent_id = ?', category.id) do |subcategory| %>
-      *<%= link_to subcategory.name, subcategory %></br>
-    <% end %>
-  <% end %>
-  </table>
 
   <br />
 

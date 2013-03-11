@@ -39,6 +39,8 @@
 		width: 460px;
 		height: 250px;
 
+		position: relative;
+
 		margin-bottom: 40px;
 		padding-left: 10px;
 		padding-top: 10px;
@@ -48,6 +50,12 @@
 		text-align: left;
 
 		@include box-shadow;
+
+		.options {
+			position: absolute;
+			top: 0;
+			right: 20px;
+		}
 
 
 		.image {

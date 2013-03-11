@@ -339,5 +339,5 @@ Manufacturer.create [{ :name => 'Samsung', :slug => 'samsung', :contact_email =>
 
 
 #Seeding Products
-Product.create [{ :name => 'Galaxy S3', :slug => 'galaxy-s3', :refname => 'GT-I9300', :released_at => '2012-05-01', :long_desc => 'The most powerful smartphone on earth', :manufacturer_id => '1'},
-                { :name => 'Galaxy S2', :slug => 'galaxy-s2', :refname => 'GT-I9100', :released_at => '2011-05-01', :long_desc => 'The thinnest smartphone on earth', :manufacturer_id => '1'}] #2
+Product.create [{ :name => 'Galaxy S3', :slug => 'galaxy-s3', :refname => 'GT-I9300', :released_at => '2012-05-01', :long_desc => 'The most powerful smartphone on earth', :manufacturer_id => '1', :category_id => '2'},
+                { :name => 'Galaxy S2', :slug => 'galaxy-s2', :refname => 'GT-I9100', :released_at => '2011-05-01', :long_desc => 'The thinnest smartphone on earth', :manufacturer_id => '1', :category_id => '2'}] #2
