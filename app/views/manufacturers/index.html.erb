@@ -1,23 +1,40 @@
-<h1>Listing manufacturers</h1>
+<div id="container">
 
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="man-boxes">
+    <% @manufacturers.each do |manufacturer| %>
+    <div class="man-box">
+      <div class="flag">
+        <%= manufacturer.country.name %>
+      </div>
+      <div class="options">
+        <%= link_to (image_tag "ui/buttons/edit.png"), edit_manufacturer_path(manufacturer) %>
+        <%= link_to (image_tag "ui/buttons/delete.png"), manufacturer, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+    </div>
+    <% end %>
+  </div>
 
-<% @manufacturers.each do |manufacturer| %>
-  <tr>
-    <td><%= link_to manufacturer.name, manufacturer %></td>
-    <td><%= link_to 'Show', manufacturer %></td>
-    <td><%= link_to 'Show', manufacturer %></td>
-    <td><%= link_to 'Edit', edit_manufacturer_path(manufacturer) %></td>
-    <td><%= link_to 'Destroy', manufacturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+  <h1>Listing manufacturers</h1>
 
-<br />
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-<%= link_to 'New Manufacturer', new_manufacturer_path %>
+  <% @manufacturers.each do |manufacturer| %>
+    <tr>
+      <td><%= link_to manufacturer.name, manufacturer %></td>
+      <td><%= link_to 'Show', manufacturer %></td>
+      <td><%= link_to 'Show', manufacturer %></td>
+      <td><%= link_to 'Edit', edit_manufacturer_path(manufacturer) %></td>
+      <td><%= link_to 'Destroy', manufacturer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+  </table>
+
+  <br />
+
+  <%= link_to 'New Manufacturer', new_manufacturer_path %>
+</div>

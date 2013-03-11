@@ -22,17 +22,6 @@ ActiveAdmin.register_page "Dashboard" do
         end
     end
 
-    columns do
-        column do
-            panel "Recent Posts" do
-                ul do
-                    Product.last(5).map do |product|
-                        li link_to(product.name, admin_product_path(product))
-                    end
-                end
-            end
-        end
-    end
 
     # Here is an example of a simple dashboard with columns and panels.
     #

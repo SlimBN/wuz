@@ -1,0 +1,23 @@
+<div id="container">
+
+  <div class="man-show-intro">
+      <div class="flag">
+        <%= @manufacturer.country.name %>
+      </div>
+      <div class="options">
+        <%= link_to (image_tag "ui/buttons/edit.png"), edit_manufacturer_path(@manufacturer) %>
+        <%= link_to (image_tag "ui/buttons/delete.png"), @manufacturer, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+      <div class="data-container">
+        <div class="logo">
+          afafa
+        </div>
+        <div class="man-name">
+          <%= @manufacturer.name %>
+        </div>
+        <div class="man-desc">
+          zfzefzf
+        </div>
+      </div>
+  </div>
+</div>

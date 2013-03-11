@@ -380,7 +380,6 @@ ActiveRecord::Schema.define(:version => 20130311130721) do
     t.text     "long_desc"
     t.integer  "manufacturer_id"
     t.integer  "category_id"
-    t.integer  "cities_picture_id"
     t.string   "slug",                :null => false
     t.integer  "brag_id"
     t.integer  "original_product_id"
