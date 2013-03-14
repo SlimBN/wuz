@@ -3,6 +3,10 @@ class CreateManufacturers < ActiveRecord::Migration
     create_table :manufacturers do |t|
       t.string :name
       t.string :adress
+      t.string :founder
+      t.string :area_served
+      t.string :actual_director
+      t.string :logo
       t.decimal :hq_lat
       t.decimal :hq_long
       t.string :web
