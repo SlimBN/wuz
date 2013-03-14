@@ -277,14 +277,18 @@ ActiveRecord::Schema.define(:version => 20130311130721) do
   create_table "manufacturers", :force => true do |t|
     t.string   "name"
     t.string   "adress"
+    t.string   "founder"
+    t.string   "area_served"
+    t.string   "actual_director"
+    t.string   "logo"
     t.decimal  "hq_lat"
     t.decimal  "hq_long"
     t.string   "web"
     t.text     "long_desc"
     t.date     "founded_at"
     t.date     "closed_at"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.string   "contact_phone"
     t.string   "contact_fax"
     t.string   "contact_email"
